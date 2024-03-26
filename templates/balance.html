@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cougar Card Balance Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/balance.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='image/apple-touch-icon.png') }}">
+    <style>
+    {% if user_id == 8593 %}
+    #name {
+        background: linear-gradient(5deg, rgba(17,17,17,1) 10%, rgba(51,51,51,1) 50%, rgba(51,51,51,1) 75%, rgba(17,17,17,1) 90%);
+    }
+    {% endif %}
+    </style>
+</head>
+<body>
+<h1>Balance - Cougar Card Balance Checker</h1>
+<hr>
+<h2 class="name" id="name">{{ name }}</h2>
+<div id="balances">
+    <div id="cafdiv" class="baldiv">
+        <h2 class="baltext" id="caftext">Main Caf: {{ caf_bal }}</h2>
+    </div>
+    <br>
+    <div id="dendiv" class="baldiv">
+        <h2 class="baltext" id="dentext">The Den: {{ den_bal }}</h2>
+    </div>
+</div>
+
+<form action="/logout" id="loginform">
+    <input type="submit" value="Log out" id="login">
+</form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, form, label, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font size and family */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+}
+
+/* Style the balance container */
+#balances {
+  max-width: 600px; /* Increase max-width for better mobile spacing */
+  margin: 40px auto; /* Adjust margin for better mobile spacing */
+}
+
+/* Style individual balance divs */
+.baldiv {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  background-color: #444;
+  border-radius: 2.5%/50%;
+}
+
+/* Style balance text */
+.baltext {
+  color: #ccc;
+  text-align: center; /* Center the balance text */
+}
+
+/* Style the form container */
+#loginform {
+  max-width: 600px; /* Increase max-width for better mobile spacing */
+  margin: 20px auto; /* Adjust margin for better mobile spacing */
+}
+
+/* Style the login button */
+#login {
+  width: 60%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hover styles */
+#login:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.name {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  border-radius: 25%;
+  background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(51,51,51,1) 25%, rgba(51,51,51,1) 75%, rgba(17,17,17,1) 100%);
+}
+
+/* Media query for smaller screens (mobile) */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for better mobile spacing */
+  #balances {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+    margin: 40px auto; /* Adjust margin for better mobile spacing */
+  }
+
+  #loginform {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+    margin: 20px auto; /* Adjust margin for better mobile spacing */
+  }
+
+  .baldiv {
+    border-radius: 5%/50%;
+  }
+
+  #login {
+    border-radius: 10%/50%;
+  }
+}

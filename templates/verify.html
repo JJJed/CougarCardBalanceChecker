@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cougar Card Balance Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verify.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='image/apple-touch-icon.png') }}">
+</head>
+<body>
+<h1>Verify - Cougar Card Balance Checker</h1>
+
+<form id="form" method="post">
+    {{ form.name.label }}
+    {{ form.name }}<br>
+    {{ form.email.label }}
+    {{ form.email }}<br><br>
+    {{ form.submit }}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        {% if category == 'error' %}
+          <p style="color: red;">{{ message }}</p>
+        {% elif category == 'success' %}
+          <p style="color: green;">{{ message }}</p>
+        {% endif %}
+      {% endfor %}
+    {% endwith %}
+    <h6 id="limitnote">{{ max_requests - requests_today }}/{{ max_requests }} daily verification slots available.</h6>
+</form>
+<form action="/login" id="loginform">
+    <input type="submit" value="Back" id="login">
+</form>
+</body>
+</html>

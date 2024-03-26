@@ -1,0 +1,76 @@
+/* Reset some default styles */
+body, h1, form, label, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font size and family */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-color: #222; /* Header background color */
+  color: #fff; /* Header text color */
+}
+
+/* Style the form container for better mobile spacing */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #555;
+  background-color: #444; /* Form background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+/* Style the form elements for better spacing */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc; /* Label text color */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #555; /* Input background color */
+  color: #fff; /* Input text color */
+  border: 1px solid #777;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #007bff; /* Submit button background color */
+  color: #fff; /* Submit button text color */
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+/* Style for error messages */
+p.error-message {
+  color: red;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 600px) {
+  /* Increase the font size for larger screens */
+  body {
+    font-size: 18px;
+  }
+
+  /* Center the form on larger screens */
+  form {
+    margin: 20px auto;
+  }
+}
